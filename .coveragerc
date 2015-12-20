@@ -1,0 +1,10 @@
+[run]
+branch = True
+omit = *migrations*,
+       *urls*,
+       *test*,
+       *admin*,
+       ./sherlock/config/*,
+       ./sherlock/manage.py,
+       ./sherlock/wsgi.py,
+       *__init__*
