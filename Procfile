@@ -1,1 +1,1 @@
-web: newrelic-admin run-program gunicorn --pythonpath="$PWD/sherlock" wsgi:application
+web: gunicorn --pythonpath="$PWD/sherlock" wsgi:application

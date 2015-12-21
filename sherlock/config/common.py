@@ -83,7 +83,7 @@ class Common(Configuration):
     )
 
     # Postgres
-    DATABASES = values.DatabaseURLValue('postgres://uname:pass@host:5432/dbname')
+    DATABASES = values.DatabaseURLValue('postgres://postgres:root@localhost:5432/sherlock_rest')
 
     # General
     TIME_ZONE = 'UTC'
