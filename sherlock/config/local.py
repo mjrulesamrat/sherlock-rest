@@ -11,17 +11,17 @@ class Local(Common):
     for config in Common.TEMPLATES:
         config['OPTIONS']['debug'] = DEBUG
 
-    # Testing
-    INSTALLED_APPS = Common.INSTALLED_APPS
-    INSTALLED_APPS += ('django_nose',)
-    TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
-    NOSE_ARGS = [
-        BASE_DIR,
-        '--nologcapture',
-        '--with-coverage',
-        '--with-progressive',
-        '--cover-package={}'.format(BASE_DIR)
-    ]
+    # # Testing
+    # INSTALLED_APPS = Common.INSTALLED_APPS
+    # INSTALLED_APPS += ('django_nose',)
+    # TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+    # NOSE_ARGS = [
+    #     BASE_DIR,
+    #     '--nologcapture',
+    #     '--with-coverage',
+    #     '--with-progressive',
+    #     '--cover-package={}'.format(BASE_DIR)
+    # ]
 
     # Mail
     EMAIL_HOST = 'localhost'
@@ -29,10 +29,10 @@ class Local(Common):
     EMAIL_BACKEND = values.Value('django.core.mail.backends.console.EmailBackend')
 
     # Django RQ local settings
-    RQ_QUEUES = {
-        'default': {
-            'URL': os.getenv('REDISTOGO_URL', 'redis://localhost:6379'),
-            'DB': 0,
-            'DEFAULT_TIMEOUT': 500,
-        },
-    }
+    # RQ_QUEUES = {
+    #     'default': {
+    #         'URL': os.getenv('REDISTOGO_URL', 'redis://localhost:6379'),
+    #         'DB': 0,
+    #         'DEFAULT_TIMEOUT': 500,
+    #     },
+    # }
